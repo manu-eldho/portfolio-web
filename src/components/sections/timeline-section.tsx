@@ -35,33 +35,39 @@ export function TimelineSection() {
         <div className="relative max-w-3xl mx-auto">
           <div className="absolute left-1/2 w-0.5 h-full bg-primary/30 transform -translate-x-1/2"></div>
           {timelineData.map((item, index) => (
-            <div key={index} className="relative mb-12 flex items-center w-full">
-              <div className={`absolute w-full flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                 <div className="w-1/2 pr-8">
-                    {index % 2 !== 0 && (
-                        <div className="bg-white/5 backdrop-blur-sm border border-primary/20 p-6 rounded-lg shadow-lg text-left">
-                            <p className="text-sm text-primary mb-1">{item.date}</p>
-                            <h3 className="text-xl font-headline font-bold text-foreground">{item.title}</h3>
-                            <p className="text-base font-semibold text-muted-foreground mb-2">{item.institution}</p>
-                            <p className="text-sm text-muted-foreground">{item.description}</p>
-                        </div>
-                    )}
-                 </div>
+            <div key={index} className="relative flex items-center mb-12">
+              <div
+                className={`w-1/2 ${
+                  index % 2 === 0 ? "pr-8 text-right" : "pl-8 text-left"
+                }`}
+              >
+                {index % 2 !== 0 && (
+                  <div className="bg-white/5 backdrop-blur-sm border border-primary/20 p-6 rounded-lg shadow-lg">
+                    <p className="text-sm text-primary mb-1">{item.date}</p>
+                    <h3 className="text-xl font-headline font-bold text-foreground">{item.title}</h3>
+                    <p className="text-base font-semibold text-muted-foreground mb-2">{item.institution}</p>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  </div>
+                )}
               </div>
+
               <div className="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-background rounded-full border-2 border-primary flex items-center justify-center z-10">
                 {item.icon}
               </div>
-              <div className={`absolute w-full flex ${index % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
-                 <div className="w-1/2 pl-8">
-                    {index % 2 === 0 && (
-                        <div className="bg-white/5 backdrop-blur-sm border border-primary/20 p-6 rounded-lg shadow-lg text-left">
-                            <p className="text-sm text-primary mb-1">{item.date}</p>
-                            <h3 className="text-xl font-headline font-bold text-foreground">{item.title}</h3>
-                            <p className="text-base font-semibold text-muted-foreground mb-2">{item.institution}</p>
-                            <p className="text-sm text-muted-foreground">{item.description}</p>
-                        </div>
-                    )}
-                 </div>
+
+              <div
+                className={`w-1/2 ${
+                  index % 2 === 0 ? "pl-8 text-left" : "pr-8 text-right"
+                }`}
+              >
+                {index % 2 === 0 && (
+                  <div className="bg-white/5 backdrop-blur-sm border border-primary/20 p-6 rounded-lg shadow-lg">
+                    <p className="text-sm text-primary mb-1">{item.date}</p>
+                    <h3 className="text-xl font-headline font-bold text-foreground">{item.title}</h3>
+                    <p className="text-base font-semibold text-muted-foreground mb-2">{item.institution}</p>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  </div>
+                )}
               </div>
             </div>
           ))}
