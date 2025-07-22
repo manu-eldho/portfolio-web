@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Card, CardHeader, CardContent, CardFooter } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { Github, ArrowUpRight } from "lucide-react";
+import { Github } from "lucide-react";
 import Link from "next/link";
 
 type ProjectCardProps = {
@@ -23,7 +23,7 @@ export function ProjectCard({
   techStack,
 }: ProjectCardProps) {
   return (
-    <Card className="overflow-hidden h-full flex flex-col transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 bg-secondary border border-transparent hover:border-primary/30">
+    <Card className="overflow-hidden h-full flex flex-col transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 bg-secondary/10 border border-primary/20 group">
       <CardHeader className="p-0">
         <div className="aspect-video overflow-hidden">
             <Image
@@ -45,7 +45,7 @@ export function ProjectCard({
         {techStack && (
             <div className="flex flex-wrap gap-2">
                 {techStack.map((tech) => (
-                <Badge key={tech} variant="outline" className="font-normal text-muted-foreground border-primary/20">
+                <Badge key={tech} variant="outline" className="font-normal text-muted-foreground border-primary/30">
                     {tech}
                 </Badge>
                 ))}
@@ -59,7 +59,7 @@ export function ProjectCard({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Github className="h-5 w-5 text-muted-foreground hover:text-primary" />
+                <Github className="h-5 w-5 text-primary hover:text-white" />
                 <span className="sr-only">GitHub</span>
               </Link>
             </Button>
