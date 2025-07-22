@@ -32,20 +32,20 @@ const projects = [
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="w-full py-12 md:py-24 lg:py-32 bg-card">
+    <section id="projects" className="w-full py-24 md:py-32 lg:py-40 bg-background">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">
-              My Projects
+            <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm text-primary">Featured Work</div>
+            <h2 className="text-4xl font-bold font-headline tracking-tighter sm:text-5xl md:text-6xl text-foreground">
+              Case Studies
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              A collection of my work, from professional web apps to personal
-              experiments.
+              A selection of projects that demonstrate my passion for creating elegant and effective digital solutions.
             </p>
           </div>
         </div>
-        <div className="grid gap-8 mt-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 mt-16 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}

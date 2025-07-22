@@ -5,35 +5,35 @@ import { Button } from "../ui/button";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-card">
+    <section id="contact" className="w-full py-24 md:py-32 lg:py-40 bg-background">
       <div className="container grid items-center justify-center gap-8 px-4 md:px-6">
         <div className="space-y-3 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter font-headline md:text-4xl/tight">
-            Get in Touch
+            <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm text-primary">Connect</div>
+          <h2 className="text-4xl font-bold tracking-tighter font-headline md:text-5xl/tight text-foreground">
+            Let's Create Together
           </h2>
           <p className="max-w-[600px] mx-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Have a project in mind, a question, or just want to say hi? I&apos;d
-            love to hear from you.
+            Have a project in mind, or just want to connect? I'm always open to discussing new opportunities and collaborations.
           </p>
         </div>
-        <div className="mx-auto w-full max-w-lg space-y-6">
+        <div className="mx-auto w-full max-w-lg space-y-8">
           <ContactForm />
           <div className="flex justify-center space-x-4">
             <Button variant="ghost" size="icon" asChild>
               <Link href="#" target="_blank" rel="noopener noreferrer">
-                <Twitter className="h-6 w-6" />
+                <Twitter className="h-6 w-6 text-muted-foreground transition-colors hover:text-primary" />
                 <span className="sr-only">Twitter</span>
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <Link href="#" target="_blank" rel="noopener noreferrer">
-                <Github className="h-6 w-6" />
+                <Github className="h-6 w-6 text-muted-foreground transition-colors hover:text-primary" />
                 <span className="sr-only">GitHub</span>
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <Link href="#" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-6 w-6" />
+                <Linkedin className="h-6 w-6 text-muted-foreground transition-colors hover:text-primary" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
             </Button>

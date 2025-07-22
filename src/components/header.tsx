@@ -4,40 +4,36 @@ import { Aperture } from "lucide-react";
 
 export function Header() {
   return (
-    <header className="px-4 lg:px-6 h-16 flex items-center shadow-sm sticky top-0 z-50 bg-background/95 backdrop-blur-sm">
+    <header className="px-4 lg:px-6 h-20 flex items-center sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-white/10">
       <Link href="#" className="flex items-center justify-center gap-2" prefetch={false}>
-        <Aperture className="h-6 w-6 text-primary" />
-        <span className="font-headline font-semibold text-lg">ApertureFlow</span>
+        <Aperture className="h-7 w-7 text-primary" />
+        <span className="font-headline font-bold text-2xl tracking-wider">ApertureFlow</span>
       </Link>
-      <nav className="ml-auto flex gap-4 sm:gap-6">
+      <nav className="ml-auto flex items-center gap-4 sm:gap-6">
         <Link
           href="#about"
-          className="text-sm font-medium hover:text-primary hover:underline underline-offset-4 transition-colors"
+          className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
           prefetch={false}
         >
           About
         </Link>
         <Link
           href="#projects"
-          className="text-sm font-medium hover:text-primary hover:underline underline-offset-4 transition-colors"
+          className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
           prefetch={false}
         >
           Projects
         </Link>
         <Link
           href="#experience"
-          className="text-sm font-medium hover:text-primary hover:underline underline-offset-4 transition-colors"
+          className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
           prefetch={false}
         >
           Experience
         </Link>
-        <Link
-          href="#contact"
-          className="text-sm font-medium hover:text-primary hover:underline underline-offset-4 transition-colors"
-          prefetch={false}
-        >
-          Contact
-        </Link>
+        <Button asChild variant="outline" className="rounded-full border-primary/50 hover:border-primary hover:bg-primary/10 text-primary">
+            <Link href="#contact">Contact Me</Link>
+        </Button>
       </nav>
     </header>
   );
