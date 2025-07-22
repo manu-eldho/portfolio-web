@@ -44,7 +44,7 @@ export function SkillsSection() {
         </div>
         <div className="grid gap-8 lg:grid-cols-2">
           {Object.entries(skills).map(([category, skillList]) => (
-            <Card key={category} className="bg-white/5 backdrop-blur-sm border-primary/20">
+            <Card key={category} className="bg-background/50 border-primary/20 shadow-[0_0_20px_rgba(212,175,55,0.1)]">
               <CardHeader>
                 <CardTitle className="text-2xl font-headline text-foreground">
                   {category}
@@ -54,7 +54,7 @@ export function SkillsSection() {
                 {skillList.map((skill) => (
                   <TooltipProvider key={skill.name}>
                     <Tooltip>
-                      <TooltipTrigger className="w-full text-left">
+                      <TooltipTrigger className="w-full text-left" suppressHydrationWarning>
                          <div className="relative h-10 w-full">
                             <div className="absolute top-1/2 left-4 -translate-y-1/2 text-sm font-medium text-foreground">
                                 {skill.name}
@@ -62,7 +62,7 @@ export function SkillsSection() {
                             <svg className="w-full h-full" viewBox="0 0 36 36">
                                 <path
                                     d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                                    className="stroke-current text-secondary/20"
+                                    className="stroke-current text-primary/20"
                                     strokeWidth="2"
                                     fill="none"
                                 ></path>
