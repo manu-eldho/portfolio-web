@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Card, CardHeader, CardContent, CardFooter } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { Github, ExternalLink } from "lucide-react";
+import { Github } from "lucide-react";
 import Link from "next/link";
 
 type ProjectCardProps = {
@@ -11,7 +11,6 @@ type ProjectCardProps = {
   imageUrl: string;
   imageHint: string;
   githubUrl?: string;
-  liveUrl?: string;
   techStack?: string[];
 };
 
@@ -21,7 +20,6 @@ export function ProjectCard({
   imageUrl,
   imageHint,
   githubUrl,
-  liveUrl,
   techStack,
 }: ProjectCardProps) {
   return (
@@ -62,14 +60,6 @@ export function ProjectCard({
               >
                 <Github className="mr-2 h-4 w-4" />
                 GitHub
-              </Link>
-            </Button>
-          )}
-          {liveUrl && (
-            <Button asChild>
-              <Link href={liveUrl} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="mr-2 h-4 w-4" />
-                Live Demo
               </Link>
             </Button>
           )}

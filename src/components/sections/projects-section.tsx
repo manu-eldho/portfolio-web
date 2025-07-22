@@ -8,7 +8,6 @@ const projects = [
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "portfolio website",
     githubUrl: "#",
-    liveUrl: "#",
     techStack: ["Next.js", "React", "Tailwind CSS", "shadcn/ui"],
   },
   {
@@ -18,7 +17,6 @@ const projects = [
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "online store",
     githubUrl: "#",
-    liveUrl: "#",
     techStack: ["TypeScript", "Node.js", "Stripe", "GraphQL"],
   },
   {
@@ -28,7 +26,6 @@ const projects = [
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "dashboard charts",
     githubUrl: "#",
-    liveUrl: "#",
     techStack: ["React", "D3.js", "Firebase"],
   },
 ];
