@@ -2,7 +2,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { AboutSection } from "@/components/sections/about-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
-import { SkillsExperienceSection } from "@/components/sections/skills-experience-section";
+import { SkillsEducationSection } from "@/components/sections/skills-experience-section";
 import { ContactSection } from "@/components/sections/contact-section";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
       <main className="flex-1">
         <AboutSection />
         <ProjectsSection />
-        <SkillsExperienceSection />
+        <SkillsEducationSection />
         <ContactSection />
       </main>
       <Footer />

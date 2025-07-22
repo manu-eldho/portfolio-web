@@ -25,11 +25,11 @@ export function Header() {
           Projects
         </Link>
         <Link
-          href="#experience"
+          href="#education"
           className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
           prefetch={false}
         >
-          Experience
+          Education
         </Link>
         <Button asChild variant="outline" className="rounded-full border-primary/50 hover:border-primary hover:bg-primary/10 text-primary">
             <Link href="#contact">Contact Me</Link>
