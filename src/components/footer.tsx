@@ -17,7 +17,7 @@ export function Footer() {
       <div className="flex items-center gap-2">
         <Aperture className="h-5 w-5 text-primary" />
         <p className="text-sm text-muted-foreground">
-          &copy; 2024 ApertureFlow. All rights reserved.
+          &copy; 2024. All rights reserved.
         </p>
       </div>
       <nav className="sm:ml-auto flex gap-2 sm:gap-4">

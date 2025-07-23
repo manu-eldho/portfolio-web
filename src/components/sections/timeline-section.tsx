@@ -2,20 +2,20 @@ import { GraduationCap, Briefcase } from "lucide-react";
 
 const timelineData = [
   {
-    icon: <Briefcase className="h-5 w-5 text-primary" />,
-    date: "Present",
-    title: "AI & ML Developer",
-    institution: "Freelance / Personal Projects",
-    description:
-      "Developing innovative AI solutions, including predictive models and intelligent applications, to solve complex real-world problems.",
-  },
-  {
     icon: <GraduationCap className="h-5 w-5 text-primary" />,
-    date: "2022 - 2026",
+    date: "2022 - Present",
     title: "Bachelor of Technology in AI & ML",
     institution: "Mar Athanasius College of Engineering",
     description:
       "Pursuing a comprehensive curriculum focused on artificial intelligence, machine learning, data science, and computer engineering fundamentals.",
+  },
+  {
+    icon: <GraduationCap className="h-5 w-5 text-primary" />,
+    date: "2020 - 2022",
+    title: "Senior Secondary Education",
+    institution: "Vimalagiri Public School",
+    description:
+      "Percentage: 93.2 %",
   },
 ];
 

@@ -9,23 +9,19 @@ import {
 const skills = {
   "Languages": [
     { name: "Python", level: 95, description: "Expert in Python for AI/ML and web development." },
-    { name: "JavaScript", level: 90, description: "Proficient in modern JavaScript (ES6+)." },
-    { name: "C", level: 80, description: "Strong understanding of C for systems programming." },
-    { name: "R", level: 75, description: "Experienced in R for statistical analysis." },
+    { name: "C Programming", level: 80, description: "Strong understanding of C for systems programming." },
+    { name: "R Programming", level: 75, description: "Experienced in R for statistical analysis." },
   ],
   "Frameworks & Libraries": [
     { name: "TensorFlow", level: 90, description: "Building and training deep learning models." },
     { name: "Flask", level: 85, description: "Creating web APIs and microservices." },
     { name: "Pandas", level: 95, description: "Data manipulation and analysis expert." },
-    { name: "React/Next.js", level: 80, description: "Building modern, server-rendered web apps." },
   ],
   "Databases": [
       { name: "SQL", level: 85, description: "Advanced querying and database design." },
-      { name: "MongoDB", level: 75, description: "Working with NoSQL databases." },
   ],
   "Tools & Platforms": [ 
     { name: "Git & GitHub", level: 90, description: "Proficient in version control workflows." },
-    { name: "Docker", level: 70, description: "Containerizing applications for deployment." },
   ]
 };
 

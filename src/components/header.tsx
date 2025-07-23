@@ -7,7 +7,7 @@ export function Header() {
     <header className="px-4 lg:px-6 h-20 flex items-center sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-primary/20">
       <Link href="#" className="flex items-center justify-center gap-2" prefetch={false}>
         <Aperture className="h-7 w-7 text-primary" />
-        <span className="font-headline font-bold text-2xl tracking-wider">AF</span>
+        <span className="font-headline font-bold text-2xl tracking-wider">ME</span>
       </Link>
       <nav className="ml-auto flex items-center gap-4 sm:gap-6">
         <Link

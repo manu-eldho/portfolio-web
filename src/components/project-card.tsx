@@ -1,9 +1,8 @@
 import Image from "next/image";
-import { Card, CardHeader, CardContent, CardFooter } from "./ui/card";
-import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
 import { Github } from "lucide-react";
 import Link from "next/link";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
 
 type ProjectCardProps = {
   title: string;
@@ -23,49 +22,50 @@ export function ProjectCard({
   techStack,
 }: ProjectCardProps) {
   return (
-    <Card className="overflow-hidden h-full flex flex-col transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 bg-secondary/10 border border-primary/20 group">
-      <CardHeader className="p-0">
-        <div className="aspect-video overflow-hidden">
-            <Image
+    <div className="w-full [perspective:2000px]">
+      <div className="relative w-full h-[600px] transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group card-flip">
+
+        {/* Front: Image */}
+        <div className="absolute inset-0 [backface-visibility:hidden] rounded-xl overflow-hidden border border-primary/20 shadow-lg">
+          <Image
             src={imageUrl}
             alt={title}
-            width={600}
-            height={400}
-            className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+            width={1024}
+            height={1536}
+            className="w-full h-full object-cover"
             data-ai-hint={imageHint}
-            />
+          />
         </div>
-      </CardHeader>
-      <CardContent className="p-6 flex-grow">
-        <h3 className="text-2xl font-bold font-headline mb-3 text-foreground">{title}</h3>
-        <p className="text-muted-foreground text-base mb-4">{description}</p>
-        
-      </CardContent>
-      <CardFooter className="p-6 pt-0 mt-auto flex justify-between items-center">
-        {techStack && (
-            <div className="flex flex-wrap gap-2">
-                {techStack.map((tech) => (
-                <Badge key={tech} variant="outline" className="font-normal text-muted-foreground border-primary/30">
-                    {tech}
+
+        {/* Back: Text */}
+        <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-black/90 text-white rounded-xl px-6 py-8 flex flex-col justify-center items-center text-center border border-primary/20">
+          <h3 className="text-2xl font-bold mb-4">{title}</h3>
+          <p className="text-base text-gray-300 mb-6">{description}</p>
+
+          {techStack && (
+            <div className="flex flex-wrap justify-center gap-2 mb-4">
+              {techStack.map((tech) => (
+                <Badge
+                  key={tech}
+                  variant="outline"
+                  className="font-normal text-muted-foreground border-primary/30"
+                >
+                  {tech}
                 </Badge>
-                ))}
+              ))}
             </div>
-        )}
-        <div className="flex gap-2">
+          )}
+
           {githubUrl && (
             <Button variant="ghost" size="icon" asChild>
-              <Link
-                href={githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5 text-primary hover:text-white" />
                 <span className="sr-only">GitHub</span>
               </Link>
             </Button>
           )}
         </div>
-      </CardFooter>
-    </Card>
+      </div>
+    </div>
   );
 }
